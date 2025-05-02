@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #121212;
+    color: #f0f0f0;
+    padding: 20px;
+  }
+  
+  .entry {
+    position: relative;
+    width: 300px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #1e1e1e;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, background-color 0.3s;
+  }
+  
+  .entry:nth-child(odd) {
+    background-color: #2a2a2a;
+  }
+  
+  .entry:nth-child(even) {
+    background-color: #1f2b33;
+  }
+  
+  .entry::before {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    font-size: 24px;
+  }
+  
+  .happy::before {
+    content: "😀";
+  }
+  
+  .meh::before {
+    content: "😐";
+  }
+  
+  .sad::before {
+    content: "😢";
+  }
+  
+  .happy:hover::before {
+    content: "😎";
+  }
+  
+  .meh:hover::before {
+    content: "🙂";
+  }
+  
+  .sad:hover::before {
+    content: "😭";
+  }
+  
+  .entry:hover {
+    transform: scale(1.03);
+  }
+  
+  h2 {
+    margin-left: 40px;
+    font-size: 1.5em;
+    color: #ffdd57;
+  }
+  
+  p {
+    color: #cccccc;
+  }
+  
+  p::first-letter {
+    font-size: 150%;
+    font-weight: bold;
+    color: #00bcd4;
+  }
+  
+  .like-button {
+    background: none;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+    color: #ffffff;
+  }
+  
+  .like-button:active {
+    color: hotpink;
+    transform: scale(1.3);
+  }
+  
+  .like-button::after {
+    content: " 💖";
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .like-button:active::after {
+    opacity: 1;
+  }
+  
